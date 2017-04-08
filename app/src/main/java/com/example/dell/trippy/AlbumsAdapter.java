@@ -3,6 +3,7 @@ package com.example.dell.trippy;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.annotation.MainThread;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -59,6 +60,18 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
 
                 if (position == 0) {
                     Intent i = new Intent(mContext, Places_to_visit.class);
+                    mContext.startActivity(i);
+
+                }
+
+                if (position == 1) {
+                    Intent i = new Intent(mContext, TransportAct.class);
+                    mContext.startActivity(i);
+
+                }
+
+                if (position == 9) {
+                    Intent i = new Intent(mContext, Main2Activity.class);
                     mContext.startActivity(i);
 
                 }
