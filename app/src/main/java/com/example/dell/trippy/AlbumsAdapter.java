@@ -114,7 +114,7 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
                 }
 
                 if (position==8){
-                    Toast.makeText(mContext,"Coming Soon ",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext,"Coming Soon",Toast.LENGTH_SHORT).show();
                 }
 
                 if (position == 9) {
