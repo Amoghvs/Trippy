@@ -39,8 +39,6 @@
         </activity>
         <activity android:name=".WebActivity"></activity>
 
-        <!--
-        -->
 
     </application>
 

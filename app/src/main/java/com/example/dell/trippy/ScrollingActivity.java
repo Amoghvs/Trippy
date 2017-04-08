@@ -75,8 +75,8 @@ public class ScrollingActivity extends AppCompatActivity {
         }
 
 
-        SharedPreferences cd = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-        cd.edit().putString("hint", hint).apply();
+        //SharedPreferences cd = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        //cd.edit().putString("hint", hint).apply();
 
 
         setSupportActionBar(toolbar);
