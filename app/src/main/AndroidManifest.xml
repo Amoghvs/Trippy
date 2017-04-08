@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
 
-        <!--
+
         <activity
             android:name=".TransportAct"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -38,6 +38,8 @@
 
         </activity>
         <activity android:name=".WebActivity"></activity>
+
+        <!--
         -->
 
     </application>

@@ -20,18 +20,16 @@ import android.widget.TextView;
 public class ScrollingActivity extends AppCompatActivity {
 
     ImageView myImgView;
-    String title;
+    String title,hint;
     NestedScrollView nestedScrollView;
     TextView abttext,name;
-    String CName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_scrolling);
 
-        SharedPreferences cd = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-        CName = cd.getString("hint", "");
+        String data = getIntent().getExtras().getString("city");
 
         myImgView = (ImageView) findViewById(R.id.img);
 
@@ -48,29 +46,37 @@ public class ScrollingActivity extends AppCompatActivity {
         collapsingToolbarLayout.setTitle(" ");
 
 
-        switch (CName){
-            case "c2" :myImgView.setImageResource(R.drawable.blr);
+        switch (data){
+            case "bang" :myImgView.setImageResource(R.drawable.blr);
                 abttext.setText(getResources().getText(R.string.Bangalore));
                 name.setText("Bangalore");
                 title="Bangalore";
+                hint = "c2";
                 break;
-            case "c3" :myImgView.setImageResource(R.drawable.mumbai);
+            case "mum" :myImgView.setImageResource(R.drawable.mumbai);
                 abttext.setText(getResources().getText(R.string.Bangalore));
                 name.setText("Mumbai");
                 title="Mumbai";
+                hint = "c3";
                 break;
-            case "c1" :myImgView.setImageResource(R.drawable.delhi);
+            case "del" :myImgView.setImageResource(R.drawable.delhi);
                 abttext.setText(getResources().getText(R.string.Bangalore));
                 name.setText("Delhi");
                 title="Delhi";
+                hint = "c1";
                 break;
-            case "c4" :myImgView.setImageResource(R.drawable.goa);
+            case "goa" :myImgView.setImageResource(R.drawable.goa);
                 abttext.setText(getResources().getText(R.string.Bangalore));
                 name.setText("Goa");
                 title="Goa";
+                hint = "c4";
                 break;
 
         }
+
+
+        SharedPreferences cd = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        cd.edit().putString("hint", hint).apply();
 
 
         setSupportActionBar(toolbar);
