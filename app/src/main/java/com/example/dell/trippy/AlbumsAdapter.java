@@ -70,6 +70,13 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
 
                 }
 
+                if (position == 2) {
+                    Intent i = new Intent(mContext, WebActivity.class);
+                    i.putExtra("website","oyo");
+                    mContext.startActivity(i);
+
+                }
+
                 if (position == 9) {
                     Intent i = new Intent(mContext, Main2Activity.class);
                     mContext.startActivity(i);

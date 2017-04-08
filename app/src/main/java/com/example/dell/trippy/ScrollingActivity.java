@@ -106,8 +106,7 @@ public class ScrollingActivity extends AppCompatActivity {
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        FloatingActionButton trfab = (FloatingActionButton) findViewById(R.id.trfab);
-        FloatingActionButton wefab = (FloatingActionButton) findViewById(R.id.wefab);
+
         FloatingActionButton mafab = (FloatingActionButton) findViewById(R.id.mafab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,22 +116,6 @@ public class ScrollingActivity extends AppCompatActivity {
             }
         });
 
-        trfab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(ScrollingActivity.this,TransportAct.class);
-                startActivity(i);
-            }
-        });
-
-        wefab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(ScrollingActivity.this,WebActivity.class);
-                i.putExtra("website","fb");
-                startActivity(i);
-            }
-        });
 
         mafab.setOnClickListener(new View.OnClickListener() {
             @Override

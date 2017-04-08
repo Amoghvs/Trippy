@@ -1,7 +1,9 @@
 package com.example.dell.trippy;
 
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -16,6 +18,7 @@ import android.webkit.WebViewClient;
 public class WebActivity extends AppCompatActivity {
 
     WebView mainWebView;
+    String CName;
 
     /** Called when the activity is first created. */
     @Override
@@ -23,6 +26,9 @@ public class WebActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web);
         overridePendingTransition(R.animator.left_in, R.animator.left_out);
+
+        SharedPreferences cd = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        CName = cd.getString("hint", "");
 
 
         String data = getIntent().getExtras().getString("website");
@@ -48,7 +54,7 @@ public class WebActivity extends AppCompatActivity {
             case "ne" : website = "http://www.thehindu.com/news/"; break;
             case "do" : website = "https://www.practo.com/"; break;
             case "ub" : website = "https://m.uber.com/"; break;
-            case "ho" : website = "https://www.oyorooms.com/"; break;
+            case "oyo" : website = "https://www.oyorooms.com/"; break;
 
 
 
