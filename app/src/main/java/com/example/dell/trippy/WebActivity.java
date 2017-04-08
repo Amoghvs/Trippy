@@ -18,7 +18,7 @@ import android.webkit.WebViewClient;
 public class WebActivity extends AppCompatActivity {
 
     WebView mainWebView;
-    String CName;
+    String CName,city;
 
     /** Called when the activity is first created. */
     @Override
@@ -46,15 +46,75 @@ public class WebActivity extends AppCompatActivity {
 
 
         switch (data){
-            case "fb" : website = "https://www.zoomcar.com/bangalore/"; break;
-            case "tw" : website = "https://twitter.com/login"; break;
-            case "in" : website = "https://www.instagram.com/accounts/login/"; break;
-            case "ln" : website = "https://in.linkedin.com/"; break;
-            case "qu" : website = "https://www.quora.com/"; break;
-            case "ne" : website = "http://www.thehindu.com/news/"; break;
-            case "do" : website = "https://www.practo.com/"; break;
+            case "rent" :
+                switch (CName) {
+                    case "c1":
+                        website = "https://zoomcar.com/delhi/";
+                        break;
+                    case "c2":
+                        website = "https://zoomcar.com/bangalore/";
+                        break;
+                    case "c3":
+                        website = "https://zoomcar.com/mumbai/";
+                        break;
+                    case "c4":
+                        website = "http://www.goaholidayhomes.com/cars/";
+                        break;
+                }
+
+                break;
+
+            case "ex" :
+                switch (CName) {
+                    case "c1":
+                        website = "https://in.bookmyshow.com/delhi/experiences";
+                        break;
+                    case "c2":
+                        website = "https://in.bookmyshow.com/bengaluru/experiences";
+                        break;
+                    case "c3":
+                        website = "https://in.bookmyshow.com/mumbai/experiences";
+                        break;
+                    case "c4":
+                        website = "https://in.bookmyshow.com/goa/experiences";
+                        break;
+                }
+
+                break;
+
+
             case "ub" : website = "https://m.uber.com/"; break;
-            case "oyo" : website = "https://www.oyorooms.com/"; break;
+            case "oyo" : switch (CName) {
+                case "c1":
+                    website = "https://www.oyorooms.com/oyos-in-delhi";
+                    break;
+                case "c2":
+                    website = "https://www.oyorooms.com/hotels-in-bangalore/";
+                    break;
+                case "c3":
+                    website = "https://www.oyorooms.com/hotels-in-mumbai/";
+                    break;
+                case "c4":
+                    website = "https://www.oyorooms.com/hotels-in-goa/";
+                    break;
+            }
+                break;
+
+            case "zo" : switch (CName) {
+                case "c1":
+                    website = "https://www.zomato.com/ncr";
+                    break;
+                case "c2":
+                    website = "https://www.zomato.com/bangalore/";
+                    break;
+                case "c3":
+                    website = "https://www.zomato.com/mumbai";
+                    break;
+                case "c4":
+                    website = "https://www.zomato.com/goa";
+                    break;
+            }
+                break;
 
 
 

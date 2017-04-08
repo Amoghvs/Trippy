@@ -27,12 +27,9 @@ public class Dest_act extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("google.navigation:q="+lat+","+lng));
-                //startActivity(intent);
-                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:"+lat+","+lng));
-                i.setClassName("com.google.android.apps.maps",
-                        "com.google.android.maps.MapsActivity");
-                startActivity(i);
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("google.navigation:q="+lat+","+lng));
+                startActivity(intent);
+
 
             }
         });

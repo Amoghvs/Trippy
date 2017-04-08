@@ -2,12 +2,12 @@ package com.example.dell.trippy;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -18,7 +18,7 @@ import android.widget.TextView;
 public class ScrollingActivity extends AppCompatActivity {
 
     ImageView myImgView;
-    String title,hint;
+    String title,hint,lat,lng;
     NestedScrollView nestedScrollView;
     TextView abttext,name;
     @Override
@@ -50,24 +50,32 @@ public class ScrollingActivity extends AppCompatActivity {
                 name.setText("Bangalore");
                 title="Bangalore";
                 hint = "c2";
+                lat="12.9716";
+                lng="77.5946";
                 break;
             case "mum" :myImgView.setImageResource(R.drawable.mumbai);
                 abttext.setText(getResources().getText(R.string.Bangalore));
                 name.setText("Mumbai");
                 title="Mumbai";
                 hint = "c3";
+                lat="19.0760";
+                lng="72.8777";
                 break;
             case "del" :myImgView.setImageResource(R.drawable.delhi);
                 abttext.setText(getResources().getText(R.string.Bangalore));
                 name.setText("Delhi");
                 title="Delhi";
                 hint = "c1";
+                lat="28.7041";
+                lng="77.1025";
                 break;
             case "goa" :myImgView.setImageResource(R.drawable.goa);
                 abttext.setText(getResources().getText(R.string.Bangalore));
                 name.setText("Goa");
                 title="Goa";
                 hint = "c4";
+                lat="15.2993";
+                lng="74.1240";
                 break;
 
         }
@@ -120,8 +128,10 @@ public class ScrollingActivity extends AppCompatActivity {
         mafab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Go to maps", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:"+lat+","+lng));
+                i.setClassName("com.google.android.apps.maps",
+                        "com.google.android.maps.MapsActivity");
+                startActivity(i);
             }
         });
     }
