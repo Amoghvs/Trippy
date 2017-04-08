@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.icetea09.demomaterialdesigncard.CarsFrag">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/text1"
+        android:text="SELECT YOUR CAR"
+        android:textSize="16dp"
+        android:paddingLeft="8dp"
+        android:layout_marginTop="130dp"
+
+        />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:id="@+id/spinnercars"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_below="@+id/text1"
+        android:entries="@array/carsname"
+        android:spinnerMode="dropdown"
+
+        />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:id="@+id/radg"
+        android:layout_below="@+id/spinnercars">
+        <RadioButton
+            android:layout_width="170dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start"
+
+            android:id="@+id/rad1"
+            android:text="PETROL"/>
+        <RadioButton
+            android:layout_width="170dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+
+            android:id="@+id/rad2"
+            android:text="DIESEL">
+
+        </RadioButton>
+
+    </RadioGroup>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/text2"
+        android:paddingLeft="8dp"
+        android:layout_marginTop="22dp"
+        android:textSize="16dp"
+        android:text="SELECT NUMBER OF PASSENGERS"
+        android:layout_below="@+id/radg"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:entries="@array/numbers"
+        android:id="@+id/spinnerpeople"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_below="@+id/text2"
+
+        android:spinnerMode="dropdown" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="16dp"
+        android:layout_marginTop="22dp"
+        android:paddingLeft="8dp"
+        android:id="@+id/text3"
+        android:layout_below="@+id/spinnerpeople"
+        android:text="ENTER THE DISTANCE"/>
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:inputType="numberDecimal"
+        android:layout_marginLeft="23dp"
+        android:hint="Distance"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/text3"
+        android:id="@+id/takedis"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GET FARE ESTIMATE"
+        android:id="@+id/button3"
+        android:foregroundGravity="bottom"
+        android:layout_marginBottom="20dp"
+        android:background="#53ffffff"
+        android:elevation="4dp"
+        android:fadingEdge="horizontal"
+        android:layout_below="@+id/takedis"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

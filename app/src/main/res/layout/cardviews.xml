@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bang"
+        android:layout_margin="10dp"
+        android:elevation="3dp"
+        app:cardCornerRadius="3dp"
+        android:onClick="onBangClick"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+        android:stateListAnimator="@animator/lift_on_touch"
+        app:cardUseCompatPadding="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/blr"
+            android:transitionName="imgtr"
+            android:scaleType="centerCrop"
+            android:id="@+id/imgblr"
+            />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#80000000"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bangalore"
+                    android:textSize="18dp"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+
+            />
+
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/del"
+        android:layout_margin="10dp"
+        android:elevation="3dp"
+        app:cardCornerRadius="3dp"
+        android:onClick="onDelClick"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+        android:stateListAnimator="@animator/lift_on_touch"
+        app:cardUseCompatPadding="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/delhi"
+                android:transitionName="imgtr"
+                android:scaleType="centerCrop"
+                android:id="@+id/imgdel"
+                />
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="#80000000"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delhi"
+                    android:textSize="18dp"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    />
+
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mum"
+        android:layout_margin="10dp"
+        android:elevation="3dp"
+        app:cardCornerRadius="3dp"
+        android:onClick="onMumClick"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+        android:stateListAnimator="@animator/lift_on_touch"
+        app:cardUseCompatPadding="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/mumbai"
+                android:transitionName="imgtr"
+                android:scaleType="centerCrop"
+                android:id="@+id/imgmum"
+                />
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#80000000"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mumbai"
+                    android:textSize="18dp"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    />
+
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/goa"
+        android:layout_margin="10dp"
+        android:elevation="3dp"
+        app:cardCornerRadius="3dp"
+        android:onClick="onGoaClick"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+        android:stateListAnimator="@animator/lift_on_touch"
+        app:cardUseCompatPadding="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/goa"
+                android:transitionName="imgtr"
+                android:scaleType="centerCrop"
+                android:id="@+id/imggoa"
+                />
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#80000000"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Goa"
+                    android:textSize="18dp"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    />
+
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+</LinearLayout>
