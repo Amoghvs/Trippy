@@ -42,6 +42,7 @@ public class MenuAct extends AppCompatActivity {
     FloatingActionMenu materialDesignFAM;
     com.github.clans.fab.FloatingActionButton floatingActionButton1;
     com.github.clans.fab.FloatingActionButton floatingActionButton2;
+
     com.github.clans.fab.FloatingActionButton floatingActionButton3;
 
 
